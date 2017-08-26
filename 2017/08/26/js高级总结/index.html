@@ -8,16 +8,26 @@
 
 <title>
   
-    one-24
+    js高级总结
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="one-24">
-<meta property="og:url" content="https://github.com/one-24/one-24.github.io.git/index.html">
+<meta name="description" content="对象的动态特性：1、在JS中 一个对象需要属性  就可以利用对象.属性名 = 值的方式为其添加   只要赋值成功  对象就新增了属性  12345var  o = &amp;#123;&amp;#125;//希望他有 name age 等//只需要o.name = &apos;kobe&apos;//必须赋值  往上添加他就有了 2、对象属性的访问形式  点语法：例如 o.name  关联数组用法：o[&amp;#39;name&amp;#39;]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js高级总结">
+<meta property="og:url" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/js高级总结/index.html">
 <meta property="og:site_name" content="one-24">
+<meta property="og:description" content="对象的动态特性：1、在JS中 一个对象需要属性  就可以利用对象.属性名 = 值的方式为其添加   只要赋值成功  对象就新增了属性  12345var  o = &amp;#123;&amp;#125;//希望他有 name age 等//只需要o.name = &apos;kobe&apos;//必须赋值  往上添加他就有了 2、对象属性的访问形式  点语法：例如 o.name  关联数组用法：o[&amp;#39;name&amp;#39;]">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/数组关联语法.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/数组关联方式-2.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/180139.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/引用类型作为函数参数-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/引用类型作为函数参数-2.png">
+<meta property="og:updated_time" content="2017-08-26T11:58:03.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="one-24">
+<meta name="twitter:title" content="js高级总结">
+<meta name="twitter:description" content="对象的动态特性：1、在JS中 一个对象需要属性  就可以利用对象.属性名 = 值的方式为其添加   只要赋值成功  对象就新增了属性  12345var  o = &amp;#123;&amp;#125;//希望他有 name age 等//只需要o.name = &apos;kobe&apos;//必须赋值  往上添加他就有了 2、对象属性的访问形式  点语法：例如 o.name  关联数组用法：o[&amp;#39;name&amp;#39;]">
+<meta name="twitter:image" content="https://github.com/one-24/one-24.github.io.git/2017/08/26/images/数组关联语法.png">
 
 
   <link rel="alternative" href="/atom.xml" title="one-24" type="application/atom+xml">
@@ -145,35 +155,26 @@
       
         <div style="max-width: 1000px">
       
-          
-
+          <article id="post-js高级总结" class="article article-type-post">
+  
+    <h1 class="article-header">
+      js高级总结
+    </h1>
   
   
-    <div class="post-list">
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/08/26/js高级总结/" >
-  js高级总结
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2017/08/26/js高级总结/"><span class="article-date">
+  <div class="article-info">
+    <span class="article-date">
   yyyy-21-Sat
 </span>
-</a>
-        
 
-        
+    
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="对象的动态特性："><a href="#对象的动态特性：" class="headerlink" title="对象的动态特性："></a>对象的动态特性：</h1><p>1、在JS中 一个对象需要属性  就可以利用对象.属性名 = 值的方式为其添加   只要赋值成功  对象就新增了属性 </p>
+    
+
+  </div>
+  <div class="article-entry">
+    <h1 id="对象的动态特性："><a href="#对象的动态特性：" class="headerlink" title="对象的动态特性："></a>对象的动态特性：</h1><p>1、在JS中 一个对象需要属性  就可以利用对象.属性名 = 值的方式为其添加   只要赋值成功  对象就新增了属性 </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  o = &#123;&#125;</div><div class="line"><span class="comment">//希望他有 name age 等</span></div><div class="line"><span class="comment">//只需要</span></div><div class="line">o.name = <span class="string">'kobe'</span></div><div class="line"><span class="comment">//必须赋值  往上添加他就有了</span></div></pre></td></tr></table></figure>
 <p>2、对象属性的访问形式</p>
 <ul>
@@ -209,13 +210,29 @@
 </li>
 </ul>
 
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
         
-      </div>
-    </div>
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
 
-  
-    </div>
-  
+
+    
+
+  </footer>
+</article>
+
 
 
 
