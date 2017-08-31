@@ -93,7 +93,7 @@
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li></ul>
               </li>
             
           
@@ -154,6 +154,234 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
+        <a href="/2017/08/31/C3/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/08/31/C3/"><span class="article-date">
+  yyyy-16-Thu
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <h4 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h4><h5 id="1、border-radius-边框圆角设置"><a href="#1、border-radius-边框圆角设置" class="headerlink" title="1、border-radius  边框圆角设置"></a>1、border-radius  边框圆角设置</h5><p>一个角有两个半径 一个是水平的一个是垂直的</p>
+<p>border-radius(参数1,参数2,参数3,参数4);  分别对应左上角 右上角  右下角  左下角   若只有一个值则四个参数都取相同的值</p>
+<h5 id="2、box-shadow-边框-盒子-阴影"><a href="#2、box-shadow-边框-盒子-阴影" class="headerlink" title="2、box-shadow  边框(盒子)阴影"></a>2、box-shadow  边框(盒子)阴影</h5><p>box-shadow(参数1,参数2,参数3,参数4);  参数1为相对于盒子X轴的位移  参数2是相对于Y轴 可以为负   参数3为阴影的模糊程度(n+“px”)  参数4为阴影颜色</p>
+<h5 id="3、border-image-边框图片"><a href="#3、border-image-边框图片" class="headerlink" title="3、border-image   边框图片"></a>3、border-image   边框图片</h5><h6 id="border-image-source-图片路径"><a href="#border-image-source-图片路径" class="headerlink" title="border-image-source 图片路径"></a>border-image-source 图片路径</h6><h6 id="border-image-slice"><a href="#border-image-slice" class="headerlink" title="border-image-slice"></a>border-image-slice</h6><p>图片边框向内偏移（裁剪图片）</p>
+<h6 id="border-image-width"><a href="#border-image-width" class="headerlink" title="border-image-width"></a>border-image-width</h6><p>图片边框的宽度  设置该属性可以改变图片边框的大小而不会影响元素的大小不会影响布局</p>
+<h6 id="border-image-outset"><a href="#border-image-outset" class="headerlink" title="border-image-outset"></a>border-image-outset</h6><p>边框图像区域超出边框的量</p>
+<h6 id="border-image-repeat"><a href="#border-image-repeat" class="headerlink" title="border-image-repeat"></a>border-image-repeat</h6><p>图像边框是否平铺</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">border-image-repeat:repeat;平铺 但是由于尺寸问题图片会显示不全的部分</div><div class="line">border-image-repeat:round; 环绕 自适应平铺 一般采取此种方式</div><div class="line">border-image-repeat:stretch(默认);  拉伸</div></pre></td></tr></table></figure>
+<h4 id="二、CSS3背景"><a href="#二、CSS3背景" class="headerlink" title="二、CSS3背景"></a>二、CSS3背景</h4><h5 id="1、background-image"><a href="#1、background-image" class="headerlink" title="1、background-image"></a>1、background-image</h5><h6 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h6><p>设置背景图片  不同的背景图像地址用逗号隔开  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">none:无背景图</div><div class="line">&lt;url&gt;:使用绝对或相对地址指定背景图</div><div class="line">例：</div><div class="line">#example1 &#123;</div><div class="line">background-image: url(img_flwr.gif), url(paper.gif);</div><div class="line">background-position: right bottom, left top;</div><div class="line">background-repeat: no-repeat, repeat;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="2、background-size"><a href="#2、background-size" class="headerlink" title="2、background-size"></a>2、background-size</h5><p>background-size:  参数1 参数2;</p>
+<p>指定背景图片的大小 可以指定像素或者百分比  百分比是相对于父元素大小的百分比  参数1 定义图像宽度  参数2 定义图像高度</p>
+<h6 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h6><h6 id="cover"><a href="#cover" class="headerlink" title="cover"></a>cover</h6><h6 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">&lt;length&gt;:用长度(具体像素)指定背景图片大小  不允许负值</div><div class="line">&lt;percentage&gt;: 百分比 不允许负值</div><div class="line">auto: 背景图片真实的大小</div><div class="line">cover: 将背景图片等比例缩放到完全覆盖容器 背景图片有可能超出容器</div><div class="line">contain:  将图片等比缩放到宽度或高度与容器相等 图像不会超出容器 但是有可能不会铺满容器</div></pre></td></tr></table></figure>
+<h5 id="3、background-origin"><a href="#3、background-origin" class="headerlink" title="3、background-origin"></a>3、background-origin</h5><p>background-origin:;  指定了背景图像的位置</p>
+<h6 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h6><p>background-origin:border-box;   背景图像从边框区域左上角开始显示</p>
+<p><img src="../images/border-box.png" alt="border-box"></p>
+<h6 id="padding-box"><a href="#padding-box" class="headerlink" title="padding-box"></a>padding-box</h6><p>background-origin:padding-box;   背景图片从padding区域左上角开始显示</p>
+<p><img src="../images/padding-box.png" alt="padding-box"></p>
+<h6 id="content-box"><a href="#content-box" class="headerlink" title="content-box"></a>content-box</h6><p>background-origin:content-box;   从内容区域左上角显示图片</p>
+<p><img src="../images/content-box.png" alt="content-box"></p>
+<p>4、background-clip</p>
+<p>background-clip  背景向外裁剪的区域</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">background-clip:border-box;   从border区域(不包括border)开始向外裁剪背景</div><div class="line">background-clip:padding-box;  从padding区域(不包括padding)开始向外裁剪背景</div><div class="line">background-clip:content-box;  从content区域开始向外裁剪背景</div><div class="line"> -webkit-background-clip: text;  (不加webkit没有效果！) 从前景内容的形状(比如文字)开始向外裁剪  注意要把文字颜色设为透明-webkit-text-fill-color:transparent;</div><div class="line"> 例：</div><div class="line"> #dv&#123;</div><div class="line">            width: 1000px;</div><div class="line">            height: 500px;</div><div class="line">            font-size: 200px;</div><div class="line">            font-weight: 900;</div><div class="line">            background: url(&quot;images/kobe1 (1).jpg&quot;);</div><div class="line">            -webkit-background-clip: text;</div><div class="line">            color: transparent;</div><div class="line">            /*-webkit-text-fill-color:transparent;*/</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p><img src="../images/background-clip.png" alt=""></p>
+<p><img src="../images/background-clip2.png" alt=""></p>
+<h4 id="三、gradients渐变"><a href="#三、gradients渐变" class="headerlink" title="三、gradients渐变"></a>三、gradients渐变</h4><h6 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient"></a>linear-gradient</h6><p>linear-gradient(参数1,参数2,参数3);  使用线性渐变创建背景图像    参数1是渐变的方向 参数2是渐变的起始颜色  参数3是渐变的结束颜色   至少三个参数   可以设置多个  渐变的颜色后面加上百分比  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">例:</div><div class="line">background-image: linear-gradient(</div><div class="line">          to right,</div><div class="line">          yellow 25% ,</div><div class="line">          green 50%,</div><div class="line">          pink 75%</div><div class="line">      );</div></pre></td></tr></table></figure>
+<p>参数1 可以设置方位名词如:linear-gradient:( to  right,yellow,green; )意为从左到右黄色到绿色的渐变(向上 下 左 右 对角方向)</p>
+<p>也可以用角度指定渐变的方向  0deg会创建一个从下到上的渐变  90deg会创建一个从左到右的渐变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">例:</div><div class="line">background-image: linear-gradient(</div><div class="line">      135deg,</div><div class="line">      yellow 25%,</div><div class="line">      green 25%,</div><div class="line">      green 50%,</div><div class="line">      pink 50%,</div><div class="line">      pink 75%,</div><div class="line">      blue 75%</div><div class="line">      );</div></pre></td></tr></table></figure>
+<h6 id="transparency"><a href="#transparency" class="headerlink" title="transparency"></a>transparency</h6><p>渐变也支持透明度 使用rgba()定义颜色结点 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">例：从左下角开始的线性渐变。起点是完全透明，慢慢过渡到完全不透明的红色</div><div class="line">#dv&#123;</div><div class="line">    height: 200px;</div><div class="line">    width: 200px;</div><div class="line">    background: linear-gradient(to right top,rgba(255,0,0,0),rgba(255,0,0,1));</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h6 id="repeat-linear-gradient"><a href="#repeat-linear-gradient" class="headerlink" title="repeat-linear-gradient"></a>repeat-linear-gradient</h6><p>background:repeat-linear-gradient;重复的线性渐变  <img src="../images/repeat-linear-gradient.png" alt="repeat-linear-gradient"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">例：</div><div class="line">#grad &#123; </div><div class="line">  /* Safari 5.1 - 6.0 */ </div><div class="line">  background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%); </div><div class="line">  /* Opera 11.1 - 12.0 */ </div><div class="line">  background: -o-repeating-linear-gradient(red, yellow 10%, green 20%); </div><div class="line">  /* Firefox 3.6 - 15 */ </div><div class="line">  background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%); </div><div class="line">  /* 标准的语法 */ </div><div class="line">  background: repeating-linear-gradient(red, yellow 10%, green 20%); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="radial-gradient"><a href="#radial-gradient" class="headerlink" title="radial-gradient"></a>radial-gradient</h6><p>radial-gradient: (参数1,参数2,参数3);   径向渐变:从里到外扩散(圆)  参数1是半径和位置 位置用 “at”+方位名词或者具体位置   参数2是从最里面开始要渐变的颜色  参数3是渐变结束的颜色   也可以有多个参数  渐变的颜色后面加上百分比  用逗号隔开   默认情况下 渐变的中心是center(中心点)  渐变的形状是ellipse(椭圆)  渐变的大小是farthest-corner(表示到最远的角落)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">例：</div><div class="line"> background-image: radial-gradient(</div><div class="line"> 100px at center,</div><div class="line"> yellow 25%,</div><div class="line"> green 25%,</div><div class="line"> green 50%,</div><div class="line"> blue 50%,</div><div class="line"> blue 75%,</div><div class="line"> pink 75%, </div><div class="line"> pink 90%</div><div class="line"> );</div></pre></td></tr></table></figure>
+<p>不同尺寸(半径)大小关键字的使用</p>
+<p><img src="../images/gradient.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">closest-side</div><div class="line">farthest-side</div><div class="line">closest-corner</div><div class="line">farthest-corner</div><div class="line">例：</div><div class="line">#dv&#123;</div><div class="line">   background: radial-gradient(closest-side,green,skyblue,seagreen,#ccc);</div><div class="line">        &#125;</div><div class="line">#dv2&#123;</div><div class="line">   background: radial-gradient(farthest-side,green,skyblue,seagreen,#ccc);</div><div class="line">        &#125;</div><div class="line">#dv3 &#123;</div><div class="line">   background: radial-gradient(closest-corner,green,skyblue,seagreen,#ccc);</div><div class="line">        &#125;</div><div class="line"> #dv4 &#123;</div><div class="line">   background: radial-gradient(farthest-corner,green,skyblue,seagreen,#ccc);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h6 id="repeat-radial-gradient"><a href="#repeat-radial-gradient" class="headerlink" title="repeat-radial-gradient"></a>repeat-radial-gradient</h6><p>重复的径向渐变  </p>
+<h4 id="四、CSS3选择器"><a href="#四、CSS3选择器" class="headerlink" title="四、CSS3选择器"></a>四、CSS3选择器</h4><p>css3新增了许多灵活查找元素的方法, CSS3选择器与jQuery中的绝大部分选择器兼容</p>
+<h5 id="1、属性选择器"><a href="#1、属性选择器" class="headerlink" title="1、属性选择器"></a>1、属性选择器</h5><p>属性：通过属性来选择元素，具有以下形式</p>
+<p>element[attr]———————-(CSS2)存在[attr]属性即可;</p>
+<p>element[attr=”val”]——————(CSS2)属性值完全等于val;</p>
+<p>element[attr~=”val”]——————–(CSS2)选择属性值为一用空格分隔开的字词列表;</p>
+<p>element[attr*=”val”]———————属性值里只要带有val值的;</p>
+<p>element[attr^=”val”]———————属性值以val字符开头的;</p>
+<p>element[attr$=”val”]———————属性值以val字符结尾的;</p>
+<p>element[attr|=”val”]———————选择属性值以val开头并且用连接符“-”分隔的字符串的元素，如果属性值仅为val也将会被选中。</p>
+<h5 id="2、伪类选择器"><a href="#2、伪类选择器" class="headerlink" title="2、伪类选择器"></a>2、伪类选择器</h5><p>:表示的是伪类选择器的语法格式</p>
+<p>element:first-child —————–表示element父级元素中的第一个element元素</p>
+<p>element:last-child——————表示element父级元素中的最后一个element元素</p>
+<p>element:nth-child(n)—————–element父级元素中的第n个element元素   n可以是数字可以是公式例如(2n,7n+1等)</p>
+<p>element:nth-child(even)—————element父级元素中的奇数项element元素</p>
+<p>element:nth-child(odd)—————-element父级元素中的偶数项element元素</p>
+<p>element:nth-child(-n+3)—————n从0开始到页面承受的范围内(此例表示前三个)</p>
+<p>element:nth-last-child(-n+3)———–后三个</p>
+<p>element:nth-of-type(n)—————-选择element父元素中具有指定类型的第n个元素</p>
+<p>element:nth-last-of-type(n)—————element父元素中具有指定类型的倒数第n个元素</p>
+<p>element:first(last)-of-type————–element父元素中具有指定类型的第一个/最后一个元素</p>
+<p>element:empty; ——————–选择没有子元素的元素 而且该元素也不含任何文本节点</p>
+<p>例：<img src="images/伪类选择器empty.png" alt=""></p>
+<p>注：(1)ul&gt;li:nth-child(3)表达的并不是一定选择列表ul中的第三个子元素li   仅有ul中第三个li元素前不存在其他的元素命题才有意义  否则不会改变第三个li的样式</p>
+<p>(2)    :nth-child(n)  中参数只能是n 不可以用其他字母代替</p>
+<p>(3)     :nth-child(odd)  选择的是奇数项  而:nth-last-child(odd)选择的是偶数项</p>
+<h6 id="目标伪类选择器-target"><a href="#目标伪类选择器-target" class="headerlink" title="目标伪类选择器    :target"></a>目标伪类选择器    :target</h6><p>element:target;        选择匹配element的所有元素  且元素被相关URL指向时</p>
+<h6 id="排除的伪类选择器-element-not-F"><a href="#排除的伪类选择器-element-not-F" class="headerlink" title="排除的伪类选择器      element:not(F)"></a>排除的伪类选择器      element:not(F)</h6><p>element:not(F)  匹配所有除元素F外的element元素</p>
+<p>例：<img src="../images/伪类排除选择器.png" alt=""></p>
+<h5 id="3、伪对象选择器"><a href="#3、伪对象选择器" class="headerlink" title="3、伪对象选择器"></a>3、伪对象选择器</h5><p>element:first-letter /  ::first-letter  元素element中第一个字符</p>
+<p>element:first-line  /  ::first-line   元素element中第一行字符</p>
+<p>element:selection   /::selection   元素element中被鼠标选中的区域</p>
+<h4 id="五、文本效果"><a href="#五、文本效果" class="headerlink" title="五、文本效果"></a>五、文本效果</h4><h5 id="1、text-shadow"><a href="#1、text-shadow" class="headerlink" title="1、text-shadow"></a>1、text-shadow</h5><p>文本阴影 有四个取值  分别是水平偏移距离 垂直偏移距离 模糊的距离  和阴影的颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">例：</div><div class="line">p&#123;</div><div class="line">  text-shadow: 5px 5px 5px #f40</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="2、text-overflow"><a href="#2、text-overflow" class="headerlink" title="2、text-overflow"></a>2、text-overflow</h5><p>文本溢出显示方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">clip:当文本溢出时不显示省略标记(...)  而是将溢出部分裁切掉</div><div class="line">ellipsis:当文本溢出时显示省略标记</div></pre></td></tr></table></figure>
+<h5 id="3、word-wrap"><a href="#3、word-wrap" class="headerlink" title="3、word-wrap"></a>3、word-wrap</h5><p>允许单词内部换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">normal:不换行  允许内容顶开或溢出指定的容器边界</div><div class="line">break-word:  内容将在边界内换行 单词内部允许断行</div></pre></td></tr></table></figure>
+<h4 id="五、2D-3D变换"><a href="#五、2D-3D变换" class="headerlink" title="五、2D/3D变换"></a>五、2D/3D变换</h4><p>理解2D坐标 Y轴正方向向下  X轴正方向向右</p>
+<p>理解3D坐标</p>
+<p><img src="../images/3D.png" alt="3D.png"></p>
+<h5 id="1-transform-2D变换"><a href="#1-transform-2D变换" class="headerlink" title="1.transform  2D变换"></a>1.transform  2D变换</h5><h6 id="translate"><a href="#translate" class="headerlink" title="translate"></a>translate</h6><p>transform: translate(参数1,参数2);  移动(平移)   第一个参数:沿着X轴移动  第二个参数:沿着Y轴移动   发生位移时是相对于对象本身原来的位置移动  不用脱离文档流也可以移动   参数1和参数2都可以设置为百分比  是相对于自身的百分比  如果第二个参数不给值则默认值是0</p>
+<p>transform:  translateX();   指定对象X轴(水平方向)的平移</p>
+<p>transform:  translateY();    指定对象Y轴(垂直方向)的平移</p>
+<h6 id="rotate"><a href="#rotate" class="headerlink" title="rotate"></a>rotate</h6><p>transform:  rotate(n+”deg”);   设置对象旋转的度数   正值为顺时针旋转  负值为逆时针旋转</p>
+<h6 id="scale"><a href="#scale" class="headerlink" title="scale"></a>scale</h6><p>transform:  scale();  缩放  第一个参数对应X轴  第二个参数对应Y轴，如果第二个参数未赋值则取第一个参数的值</p>
+<p>transform:  scaleX();  指定对象X轴方向的缩放</p>
+<p>transform:  scaleY();指定对象Y轴方向的缩放</p>
+<h6 id="skew"><a href="#skew" class="headerlink" title="skew"></a>skew</h6><p>transform:  skew(n+”deg”,n+”deg”);   倾斜   参数1:沿X轴倾斜   参数2:沿Y轴倾斜，如果第2个参数未赋值则默认为0  一般只写一个参数</p>
+<p>transform:  skewX();  指定对象X轴方向的倾斜角度</p>
+<p>transform:  skewY();  指定对象Y轴方向的倾斜角度</p>
+<h6 id="martrix"><a href="#martrix" class="headerlink" title="martrix"></a>martrix</h6><p>transform: martrix();   是把所有的2D转换方法组合在一起  </p>
+<p>martrix(参数1,参数2,参数3,参数4,参数5,参数6);    需要6个参数  包含数学函数  允许:旋转 缩放  移动  以及倾斜</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">实例</div><div class="line">如何使用 matrix 方法将 div 元素旋转 30 度：</div><div class="line">div</div><div class="line">&#123;</div><div class="line">transform:matrix(0.866,0.5,-0.5,0.866,0,0);</div><div class="line">-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */</div><div class="line">-moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */</div><div class="line">-webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */</div><div class="line">-o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="2、transform-3D变换"><a href="#2、transform-3D变换" class="headerlink" title="2、transform 3D变换"></a>2、transform 3D变换</h5><p>上面2D转换的属性3D也相同 下面是与2D不同的或者是2D不具有的</p>
+<h6 id="martrix3d"><a href="#martrix3d" class="headerlink" title="martrix3d"></a>martrix3d</h6><p>transform: martrix3d(); 使用16个值的4*4矩阵形式制定一个3D变换</p>
+<h6 id="translate-1"><a href="#translate-1" class="headerlink" title="translate"></a>translate</h6><p>transform:  translateX();  沿X轴平移</p>
+<p>transform:  translateY();   沿Y轴平移</p>
+<p>transform:  translateZ();  沿Z轴平移</p>
+<p>transform:translate3d(参数1,参数2,参数3);  参数1沿X轴平移  参数2沿Y轴平移  参数3沿Z轴平移   参数不能省略</p>
+<h6 id="rotate-1"><a href="#rotate-1" class="headerlink" title="rotate"></a>rotate</h6><p>transform:  rotateX();  沿X轴旋转</p>
+<p>transform:  rotateY();   沿Y轴旋转</p>
+<p>transform:  rotateZ();   沿Z轴旋转</p>
+<h6 id="scale-1"><a href="#scale-1" class="headerlink" title="scale"></a>scale</h6><p>transform:  scaleZ();  Z轴的缩放</p>
+<p>transform:  scale3d(参数1,参数2,参数3);    参数1、2、3分别对应X轴Y轴Z轴  参数不能省略  </p>
+<h5 id="3、transform-origin-原点"><a href="#3、transform-origin-原点" class="headerlink" title="3、transform-origin  (原点)"></a>3、transform-origin  (原点)</h5><p>transform-origin(参数1,参数2)  检索或者设置转换的原点    转换原点不影响translate位移   </p>
+<p>如果有两个参数值  第一个用于横坐标  第二个用于纵坐标</p>
+<p>如果只有一个参数值  该值用于横坐标  纵坐标默认为50%</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">默认值为50% 50%  效果等同于center center</div><div class="line">&lt;percentage&gt;:用百分比指定坐标 可以为负值</div><div class="line">&lt;length&gt;:用长度指定坐标，可以为负值</div><div class="line">left:  指定原点的横坐标为left</div><div class="line">center:  指定原点的坐标为center</div><div class="line">right:  指定原点的横坐标为right</div><div class="line">top:  原点纵坐标为top</div><div class="line">bottom:  原点纵坐标为bottom</div></pre></td></tr></table></figure>
+<h5 id="4、transform-style-3D呈现方式"><a href="#4、transform-style-3D呈现方式" class="headerlink" title="4、transform-style  (3D呈现方式)"></a>4、transform-style  (3D呈现方式)</h5><p>transform-style:指定某元素的子元素是(看起来)在三维空间内还是在该元素所在的2D平面内   需定义在父级元素中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">flat(默认): 平面</div><div class="line">preserve-3d:  3D空间视觉</div></pre></td></tr></table></figure>
+<h5 id="5、perspective-透视（视距）"><a href="#5、perspective-透视（视距）" class="headerlink" title="5、perspective  透视（视距）"></a>5、perspective  透视（视距）</h5><p>指观察者与Z=0平面的距离  取值越大距离越远 反之相同 会产生近大远小的效果  不允许负值   没有perspective就”没有”Z轴 并非任何情况下都需要透视效果</p>
+<p>perspective 有两种写法</p>
+<p>a、作为一个属性设置给父元素 作用于所有3D转换的子元素</p>
+<p>b、作为transform属性的一个值  作用于元素自身</p>
+<p><img src="../images/perspective.png" alt=""></p>
+<h5 id="6、backface-visibility"><a href="#6、backface-visibility" class="headerlink" title="6、backface-visibility"></a>6、backface-visibility</h5><p>backface-visibility:;   设置元素背面面向用户时是否可见  需要直接在该元素上定义此属性而不能在其父元素上  因为该属性默认不可继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">backface-visibility:visible;  背面可见，允许显示正面的镜像</div><div class="line">hidden; 不可见</div></pre></td></tr></table></figure>
+<h4 id="六、过渡-Transition"><a href="#六、过渡-Transition" class="headerlink" title="六、过渡 Transition"></a>六、过渡 Transition</h4><h5 id="1-transition说明："><a href="#1-transition说明：" class="headerlink" title="1.transition说明："></a>1.transition说明：</h5><p>复合属性，检索或设置对象变换时的过渡，可以为同一元素的多个属性定义过渡效果，可以缩写可以拆分</p>
+<h5 id="2-transition属性详解："><a href="#2-transition属性详解：" class="headerlink" title="2.transition属性详解："></a>2.transition属性详解：</h5><h6 id="transition-property"><a href="#transition-property" class="headerlink" title="transition-property"></a>transition-property</h6><p>transition-property:  需要过渡的属性，如果提供多个属性值，以逗号隔开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">all(默认值):所有的可以进行过渡的css属性</div><div class="line">none:不指定过渡的css属性</div><div class="line">&lt;property&gt;:指定要过渡的CSS属性名字</div></pre></td></tr></table></figure>
+<h6 id="transition-duration"><a href="#transition-duration" class="headerlink" title="transition-duration"></a>transition-duration</h6><p>transition-duration:  指定对象过渡的时间，如果提供多个属性值，以逗号隔开;</p>
+<h6 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h6><p>transition-timing-function:  设置过渡的速度(类型)，如果提供多个属性值，以逗号隔开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">linear:  线性过渡(匀速)</div><div class="line">ease:  平滑过渡</div><div class="line">ease-in:  由慢到快</div><div class="line">ease-out:  由快到慢</div><div class="line">ease-in-out:  由慢到快再到慢</div><div class="line">cubic-bezier(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;):特定的贝塞尔曲线类型，4个数值需在[0,1]区间内</div></pre></td></tr></table></figure>
+<h6 id="transition-delay"><a href="#transition-delay" class="headerlink" title="transition-delay"></a>transition-delay</h6><p>transition-delay:延迟过渡的时间，如果提供多个属性值以逗号隔开</p>
+<h6 id="3、transitionend"><a href="#3、transitionend" class="headerlink" title="3、transitionend"></a>3、transitionend</h6><p>过度结束属性</p>
+<h4 id="七、动画-animation"><a href="#七、动画-animation" class="headerlink" title="七、动画 animation"></a>七、动画 animation</h4><h5 id="1-首先定义一个动画序列-动画集"><a href="#1-首先定义一个动画序列-动画集" class="headerlink" title="1.首先定义一个动画序列(动画集)"></a>1.首先定义一个动画序列(动画集)</h5><p>@keyframes 动画名字{</p>
+<p>}</p>
+<p>简单的动画可以直接使用关键字from{}和to{}，即从一种状态过渡到另一种状态:示例如下</p>
+<ul>
+<li><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; @keyframes animate&#123;</div><div class="line">&gt; 	from&#123;opacity:1;&#125;</div><div class="line">&gt; 	to&#123;opacity:0;&#125;</div><div class="line">&gt; &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<p>如果复杂的动画可以使百分比(percentage)方式写，百分比方式是相对动画执行时间的</p>
+<ul>
+<li><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt; @keyframes animate&#123;</div><div class="line">&gt; 	from&#123;transform:translate(0,0);&#125;</div><div class="line">&gt; 	20%&#123;transform:translate(20,20);&#125;</div><div class="line">&gt; 	40%&#123;transform:translate(40,0);&#125;</div><div class="line">&gt; 	60%&#123;transform:translate(60,20);&#125;</div><div class="line">&gt; 	80%&#123;transform:translate(80,0);&#125;</div><div class="line">&gt; 	to&#123;transform:translate(100,20);&#125;</div><div class="line">&gt; &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h5 id="2-animation动画属性详解"><a href="#2-animation动画属性详解" class="headerlink" title="2.animation动画属性详解"></a>2.animation动画属性详解</h5><h6 id="animation-name"><a href="#animation-name" class="headerlink" title="animation-name"></a>animation-name</h6><p>animation-name:  动画名字,如果有多个名字以逗号分隔；</p>
+<h6 id="animation-duration"><a href="#animation-duration" class="headerlink" title="animation-duration"></a>animation-duration</h6><p>animation-duration:  动画持续执行的时间，如果有多个属性值以逗号隔开;</p>
+<h6 id="animation-timing-function"><a href="#animation-timing-function" class="headerlink" title="animation-timing-function"></a>animation-timing-function</h6><p>animation-timing-function:  过渡类型(动画执行速度)，如果多个属性值以逗号隔开；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">ease(默认)：平滑过渡</div><div class="line">ease-in: 由慢到快</div><div class="line">ease-out: 由快到慢</div><div class="line">linear: 线性过渡（匀速）</div><div class="line">ease-in-out:由慢到快再到慢</div><div class="line">cubic-bezier(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;):特定的贝塞尔曲线类型，4个数值需在[0,1区间]</div></pre></td></tr></table></figure>
+<h6 id="animation-delay"><a href="#animation-delay" class="headerlink" title="animation-delay"></a>animation-delay</h6><p>animation-delay:动画延迟执行时间，如果提供多个属性值以逗号隔开;</p>
+<h6 id="animation-iteration-count"><a href="#animation-iteration-count" class="headerlink" title="animation-iteration-count"></a>animation-iteration-count</h6><p>animation-iteration-count:动画执行的循环次数；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">infinite:无限循环</div><div class="line">&lt;number&gt;:具体的数字，具体循环多少次</div></pre></td></tr></table></figure>
+<h6 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h6><p>animation-direction:设置动画在循环结束时是否反向运动，如果提供多个属性值以逗号分隔，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">normal:正常方向</div><div class="line">alternate:正常与反向交替</div></pre></td></tr></table></figure>
+<h6 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h6><p>animation-play-state:动画执行的状态(运动或者暂停),如果提供多个属性值以逗号隔开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">running:运动</div><div class="line">paused:暂停</div></pre></td></tr></table></figure>
+<h6 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h6><p>animation-fill-mode:设置动画时间之外(结束时)的状态，如果提供多个属性值以逗号隔开；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">none(默认值):不设置动画时间之外的状态</div><div class="line">forwards:设置对象状态为动画结束时的状态</div><div class="line">backwards:设置对象状态为动画开始时的状态</div><div class="line">both:设置对象状态为动画结束或者开始时的状态</div></pre></td></tr></table></figure>
+<h4 id="八、多列-兼容不好-了解"><a href="#八、多列-兼容不好-了解" class="headerlink" title="八、多列(兼容不好  了解)"></a>八、多列(兼容不好  了解)</h4><h5 id="column-count"><a href="#column-count" class="headerlink" title="column-count"></a>column-count</h5><p>指定元素的列数</p>
+<h5 id="column-width"><a href="#column-width" class="headerlink" title="column-width"></a>column-width</h5><p>设置列宽</p>
+<h5 id="column-gap"><a href="#column-gap" class="headerlink" title="column-gap"></a>column-gap</h5><p>指定列之间的距离</p>
+<h5 id="column-rule"><a href="#column-rule" class="headerlink" title="column-rule"></a>column-rule</h5><p>设置边线</p>
+<h4 id="八、用户界面"><a href="#八、用户界面" class="headerlink" title="八、用户界面"></a>八、用户界面</h4><h5 id="appearance"><a href="#appearance" class="headerlink" title="appearance"></a>appearance</h5><p>允许使一个元素的外观像一个标准的用户界面元素</p>
+<h5 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h5><p>方框大小调整</p>
+<h5 id="nav-down"><a href="#nav-down" class="headerlink" title="nav-down"></a>nav-down</h5><p>指定在何处使用箭头向下导航键时进行导航</p>
+<h5 id="nav-index"><a href="#nav-index" class="headerlink" title="nav-index"></a>nav-index</h5><p>指定一个元素的tab顺序</p>
+<h5 id="nav-left-nav-right-nav-up"><a href="#nav-left-nav-right-nav-up" class="headerlink" title="nav-left /nav-right/nav-up"></a>nav-left /nav-right/nav-up</h5><p>指定在何处使用左侧/右侧/向上的箭头导航键进行导航</p>
+<h5 id="outline-offset"><a href="#outline-offset" class="headerlink" title="outline-offset"></a>outline-offset</h5><p>外轮廓修饰并绘制超出边框的边缘</p>
+<h5 id="resize"><a href="#resize" class="headerlink" title="resize"></a>resize</h5><p>指定一个元素是否由用户调整大小</p>
+<h4 id="八、flex-Box伸缩-弹性-盒子"><a href="#八、flex-Box伸缩-弹性-盒子" class="headerlink" title="八、flex Box伸缩(弹性)盒子"></a>八、flex Box伸缩(弹性)盒子</h4><p>是CSS3的一种新的布局模式   当页面需要适应不同的屏幕大小以及设备类型时确保元素能够适应的布局方式   目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间</p>
+<h5 id="1、弹性盒子内容"><a href="#1、弹性盒子内容" class="headerlink" title="1、弹性盒子内容"></a>1、弹性盒子内容</h5><p>由弹性容器(Flex container)和弹性元素(Flex item)组成   弹性容器(父盒子)通过设置display为flex或inline-flex将其定义为弹性盒子   弹性元素默认在弹性盒子内一行显示  默认每个弹性盒子只有一行</p>
+<h6 id="display-指定父盒子类型"><a href="#display-指定父盒子类型" class="headerlink" title="display  指定父盒子类型"></a>display  指定父盒子类型</h6><h6 id="flex-direction-子元素的排列方向-主轴方向"><a href="#flex-direction-子元素的排列方向-主轴方向" class="headerlink" title="flex-direction  子元素的排列方向(主轴方向)"></a>flex-direction  子元素的排列方向(主轴方向)</h6><h6 id="justify-content-子元素在主轴上的对齐方式"><a href="#justify-content-子元素在主轴上的对齐方式" class="headerlink" title="justify-content  子元素在主轴上的对齐方式"></a>justify-content  子元素在主轴上的对齐方式</h6><h6 id="align-items-子元素在侧轴上的对齐方式"><a href="#align-items-子元素在侧轴上的对齐方式" class="headerlink" title="align-items   子元素在侧轴上的对齐方式"></a>align-items   子元素在侧轴上的对齐方式</h6><h6 id="flex-wrap-子元素超出父盒子是否换行"><a href="#flex-wrap-子元素超出父盒子是否换行" class="headerlink" title="flex-wrap   子元素超出父盒子是否换行"></a>flex-wrap   子元素超出父盒子是否换行</h6><h6 id="align-content-设置行对齐"><a href="#align-content-设置行对齐" class="headerlink" title="align-content   设置行对齐"></a>align-content   设置行对齐</h6><h6 id="flex-flow-简写"><a href="#flex-flow-简写" class="headerlink" title="flex-flow   简写"></a>flex-flow   简写</h6><h6 id="order-子元素排列顺序"><a href="#order-子元素排列顺序" class="headerlink" title="order   子元素排列顺序"></a>order   子元素排列顺序</h6><h6 id="align-self-在子元素上使用"><a href="#align-self-在子元素上使用" class="headerlink" title="align-self    在子元素上使用"></a>align-self    在子元素上使用</h6><p>覆盖容器的align-items属性</p>
+<h6 id="flex-子元素分配空间"><a href="#flex-子元素分配空间" class="headerlink" title="flex:子元素分配空间;"></a>flex:子元素分配空间;</h6><h5 id="2、flex-direction"><a href="#2、flex-direction" class="headerlink" title="2、flex-direction"></a>2、flex-direction</h5><p>flex-direction指定弹性容器中子元素的排列方向(主轴方向)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">flex-direction:row;   横向从左到右排列(默认);</div></pre></td></tr></table></figure>
+<h6 id="flex-direction-row"><a href="#flex-direction-row" class="headerlink" title="flex-direction:row;"></a>flex-direction:row;</h6><p><img src="../images/row.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-direction:row-reverse;   翻转横向排列(右对齐 从后往前排 右边还是以第一项开头 最后一项在最左边);</div></pre></td></tr></table></figure>
+<h6 id="flex-direction-row-reverse"><a href="#flex-direction-row-reverse" class="headerlink" title="flex-direction:row-reverse;"></a>flex-direction:row-reverse;</h6><p><img src="../images/row-reverse.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-direction:column;   纵向排列</div></pre></td></tr></table></figure>
+<h6 id="flex-direction-column"><a href="#flex-direction-column" class="headerlink" title="flex-direction:column;"></a>flex-direction:column;</h6><p><img src="../images/column.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-direction:column-reverse;  翻转纵向排列(从后往前排  最后一项排在最上面)</div></pre></td></tr></table></figure>
+<h6 id="flex-direction-column-reverse"><a href="#flex-direction-column-reverse" class="headerlink" title="flex-direction:column-reverse;"></a>flex-direction:column-reverse;</h6><p><img src="../images/column-reverse.png" alt=""></p>
+<h5 id="2、justify-content"><a href="#2、justify-content" class="headerlink" title="2、justify-content"></a>2、justify-content</h5><p>justify-content 内容主轴对齐方式 应用在弹性容器(父盒子)上 把弹性项沿着弹性容器的主轴线对齐</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">justify-content:flex-start;  (默认值)弹性项目向行头紧挨着填充 第一个弹性项的main-start外边距边线被放置在该行的main-start边线  而后续弹性项一次平齐摆放</div><div class="line">justify-content:flex-end;   弹性项目向行尾紧挨着填充  第一个弹性项目的main-end外边距边线被放在该行的main-end边线  后续弹性项依次摆放</div><div class="line">justify-content:center;  弹性项目居中(如果剩余的空间是负的 则弹性项目将在两个方向同时溢出)</div><div class="line">justify-content:space-between;  弹性项目平均分布在该行上  如果剩余空间为负或者只有一个弹性项  则该值等于flex-start  否则 第一个弹性项的外边距和行的main-start边线对齐  而最后1个弹性项的外边距和行的main-end边线对齐  然后剩余的的弹性项分布在该行上  相邻项目的间隔相等</div><div class="line">justify-content:space-around;  弹性项目平均分布在该行上  两边留有一半的间隔空间  如果剩余的空间为负或者只有一个弹性项 则该值等同于center 否则  弹性项目沿该行分布  且彼此间隔相等</div></pre></td></tr></table></figure>
+<h6 id="flex-start"><a href="#flex-start" class="headerlink" title="flex-start;"></a>flex-start;</h6><h6 id="flex-end"><a href="#flex-end" class="headerlink" title="flex-end;"></a>flex-end;</h6><h6 id="center"><a href="#center" class="headerlink" title="center;"></a>center;</h6><h6 id="space-between"><a href="#space-between" class="headerlink" title="space-between;"></a>space-between;</h6><h6 id="space-around"><a href="#space-around" class="headerlink" title="space-around;"></a>space-around;</h6><p><img src="../images/justify.png" alt=""></p>
+<h5 id="3、align-items"><a href="#3、align-items" class="headerlink" title="3、align-items"></a>3、align-items</h5><p> align-items 设置或者检索弹性盒子元素在侧轴的对齐方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">align-items:flex-star;  弹性盒子元素的侧轴起始位置边界紧靠侧轴的起始边界</div><div class="line">align-items:flex-end;   弹性盒子元素的侧轴起始位置边界紧靠侧轴的结束边界</div><div class="line">align-items:center;    弹性盒子元素在该行的侧轴上居中  (如果盒子尺寸小于元素的尺寸则会向两个方向溢出相同的长度)</div><div class="line">align-items:baseline;  如元素的行内轴与侧轴为同一条 则该值与flex-start等效  否则与基线对齐</div><div class="line">align-items:stretch;  如果指定侧轴大小为auto  则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸  但同时会遵照min/max-width/height属性的限制</div></pre></td></tr></table></figure>
+<h6 id="flex-start-1"><a href="#flex-start-1" class="headerlink" title="flex-start;"></a>flex-start;</h6><h6 id="flex-end-1"><a href="#flex-end-1" class="headerlink" title="flex-end;"></a>flex-end;</h6><h6 id="center-1"><a href="#center-1" class="headerlink" title="center;"></a>center;</h6><p><img src="../images/align-items-center.png" alt=""></p>
+<h6 id="baseline"><a href="#baseline" class="headerlink" title="baseline;"></a>baseline;</h6><h6 id="stretch"><a href="#stretch" class="headerlink" title="stretch;"></a>stretch;</h6><h5 id="4、flex-wrap"><a href="#4、flex-wrap" class="headerlink" title="4、flex-wrap"></a>4、flex-wrap</h5><p>指定弹性盒子换行方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">flex-wrap:nowrap; (默认) 弹性盒子为单行  子元素可能会溢出</div><div class="line">flex-warp:wrap;  多行 弹性盒子溢出的部分会被放置到新行  子项内部会发生断行</div><div class="line">flex-wrap:wrap-reverse;  反转wrap排列</div></pre></td></tr></table></figure>
+<h6 id="nowrap"><a href="#nowrap" class="headerlink" title="nowrap"></a>nowrap</h6><h6 id="wrap"><a href="#wrap" class="headerlink" title="wrap"></a>wrap</h6><h6 id="wrap-reverse"><a href="#wrap-reverse" class="headerlink" title="wrap-reverse"></a>wrap-reverse</h6><p><img src="../images/wrap-reverse.png" alt=""></p>
+<h5 id="5、align-content"><a href="#5、align-content" class="headerlink" title="5、align-content"></a>5、align-content</h5><p>align-content属性用于修改flex-wrap属性的行为  类似于align-items  但它不是设置弹性子元素的对齐  而是设置各行的对齐</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">align-content:stretch;  (默认)  各行会议伸展以占用剩余空间</div><div class="line">align-content:flex-star;  各行向弹性盒容器的起始位置堆叠</div><div class="line">align-content:flex-end;   各行向弹性盒容器的结束位置堆叠</div><div class="line">align-content:center;     各行向弹性盒容器的中间堆叠</div><div class="line">align-content:space-between;  各行在弹性盒容器中平均分布</div><div class="line">align-content:space-around;   各行在弹性盒容器中平均分布 两端保留子元素与子元素之间间距大小的一半</div></pre></td></tr></table></figure>
+<h5 id="6、弹性子元素属性"><a href="#6、弹性子元素属性" class="headerlink" title="6、弹性子元素属性"></a>6、弹性子元素属性</h5><h6 id="排序order"><a href="#排序order" class="headerlink" title="排序order"></a>排序order</h6><p>order:数字;   用整数值来定义排列顺序  数值小的排在前面 可以为负值 </p>
+<h6 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h6><p>设置margin值为auto时  自动获取弹性容器中剩余的空间 所以设置垂直方向margin值为auto  可以使弹性子元素在容器的两轴方向都完全居中 </p>
+<h6 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h6><p>align-self  用于设置弹性元素自身在侧轴方向上的对齐方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">align-self:auto;  如果align-self的值为auto  则其计算值为父元素的align-items值  如果没有父元素 则计算值为stretch</div><div class="line">align-self:flex-start; 弹性盒子元素的侧轴起始位置边界紧靠住该行的侧轴起始边界</div><div class="line">align-self:flex-end;   弹性盒子元素的侧轴起始位置边界紧靠住该行的侧轴结束边界</div><div class="line">align-self:center;  弹性盒子元素在该行的侧轴上居中放置(如果该行的尺寸小于弹性盒子元素的尺寸 则会向两个方向溢出相同长度)</div><div class="line">align-self:baseline;  如弹性盒子元素的行内轴与侧轴是同一条  则该值与flex-start等效  否则与基线对齐</div><div class="line">align-self:stretch;如果指定侧轴大小属性为auto 则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸  但同时会遵守min/max-width/height属性的限制</div></pre></td></tr></table></figure>
+<h6 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h6><p>用于指定弹性子元素如何分配空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">取值：</div><div class="line">flex:none;  none关键字的计算值为:0 0 auto;</div><div class="line">[flex-grow]:定义弹性盒子元素的扩展比率;</div><div class="line">[flex-shrink]:定义弹性盒子元素的收缩比例;</div><div class="line">[flex-basis]:定义弹性盒子元素的默认基准值;</div></pre></td></tr></table></figure>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
         <a href="/2017/08/26/js高级总结/" >
   js高级总结
 </a>
@@ -188,14 +416,11 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mix</span>(<span class="params">obj1,obj2</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> obj2)&#123;</div><div class="line">    obj1[key] = obj2[key]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>4、凡是需要给对象动态添加成员的时候 必须使用关联数组语法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  name : <span class="string">'kobe'</span>,</div><div class="line">  sayHello : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'你好,我叫'</span>+<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//使用关联数组的语法访问其name属性 调用其sayHello方法</span></div><div class="line"><span class="comment">//console.log(o.name)</span></div><div class="line"><span class="built_in">console</span>.log(o[<span class="string">'name'</span>])</div><div class="line"><span class="comment">//o.sayHello()</span></div><div class="line">o[<span class="string">'sayHello'</span>]()</div></pre></td></tr></table></figure>
-<p>//当对象属性很多的时候使用遍历方法<br>for(var k in o){</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> o[ k ] === <span class="string">'function'</span> )&#123;</div><div class="line">  o[k]()</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'log:'</span>+o[ k ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>}</p>
-<p>//关于for-in  此处 k 是变量 循环中相当于给 k 赋值 var k = ‘name’ 和  var k = ‘sayHello’   此时 k 已经是字符串  所以o[k] 能直接使用</p>
-<p><img src="../images/数组关联语法.png" alt=""></p>
-<p><img src="../images/数组关联方式-2.png" alt=""></p>
 </li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//当对象属性很多的时候使用遍历方法</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> o)&#123;</div><div class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> o[ k ] === <span class="string">'function'</span> )&#123;</div><div class="line">    o[k]()</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'log:'</span>+o[ k ])</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//关于for-in  此处 k 是变量 循环中相当于给 k 赋值 var k = 'name' 和  var k = 'sayHello'   此时 k 已经是字符串  所以o[k] 能直接使用</span></div></pre></td></tr></table></figure>
+<p> <img src="../images/数组关联语法.png" alt=""></p>
+<p>  <img src="../images/数组关联方式-2.png" alt=""></p>
 <h1 id="值类型和引用类型作为函数参数传递时候的特性"><a href="#值类型和引用类型作为函数参数传递时候的特性" class="headerlink" title="值类型和引用类型作为函数参数传递时候的特性"></a>值类型和引用类型作为函数参数传递时候的特性</h1><p>1、作为函数的参数 就是将参数的数据拷贝一份 传递给函数的定义中的参数</p>
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">num</span>)</span>&#123; &#125;</div><div class="line"> <span class="keyword">var</span> a = <span class="number">123</span></div><div class="line"> foo(a)</div><div class="line"> <span class="comment">//函数在调用的时候 首先需要将参数中的数据拷贝一份 即数字123  拷贝一份  </span></div><div class="line"> <span class="comment">//跳转到函数的定义中(函数体)  在此之前完成了参数的赋值  即 num = 123</span></div><div class="line"> <span class="comment">//执行完后 才正式进入函数内  准备执行函数中的每一句话</span></div></pre></td></tr></table></figure>
 <p>  2、值类型作为函数参数传递的特征  函数内与函数外是两个不同的变量  仅仅是值相等而已  </p>
