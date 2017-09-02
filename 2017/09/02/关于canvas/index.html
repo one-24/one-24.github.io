@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    关于canvas
+  
+</title>
+
+<meta name="description" content="一、绘制基础形状1、什么是canvas 是一个可以使用脚本(通常为 JavaScript )在其中绘制图形的 HTML 元素 模板骨架 123&amp;lt;canvas id=&apos;canvas&apos; width=&apos;400&apos; height=&apos;200&apos;&amp;gt;	  您的浏览器不支持canvas&amp;lt;/canvas&amp;gt; 12var canvas = document.getElementById(&apos;canva">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于canvas">
+<meta property="og:url" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/关于canvas/index.html">
+<meta property="og:site_name" content="one-24">
+<meta property="og:description" content="一、绘制基础形状1、什么是canvas 是一个可以使用脚本(通常为 JavaScript )在其中绘制图形的 HTML 元素 模板骨架 123&amp;lt;canvas id=&apos;canvas&apos; width=&apos;400&apos; height=&apos;200&apos;&amp;gt;	  您的浏览器不支持canvas&amp;lt;/canvas&amp;gt; 12var canvas = document.getElementById(&apos;canva">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/location.jpg">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-fillRect-0.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-fillRect-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/path.jpg">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas圆-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-arc-0.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-arc-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/Path2D-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/path2D-2.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/fillRect-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/miterLimit.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-linearGradient.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-linearGradient-2.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-createRadialGradient-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-createRadialGradient-2.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-createRadialGradient-3.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-shadow-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/zero.jpg">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-填充规则.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-drawImage-1.png">
+<meta property="og:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/canvas-drawImage-2.png">
+<meta property="og:updated_time" content="2017-09-02T08:51:10.257Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于canvas">
+<meta name="twitter:description" content="一、绘制基础形状1、什么是canvas 是一个可以使用脚本(通常为 JavaScript )在其中绘制图形的 HTML 元素 模板骨架 123&amp;lt;canvas id=&apos;canvas&apos; width=&apos;400&apos; height=&apos;200&apos;&amp;gt;	  您的浏览器不支持canvas&amp;lt;/canvas&amp;gt; 12var canvas = document.getElementById(&apos;canva">
+<meta name="twitter:image" content="https://github.com/one-24/one-24.github.io.git/2017/09/02/images/location.jpg">
+
+
+  <link rel="alternative" href="/atom.xml" title="one-24" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">one-24</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">one-24</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">Xiao</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1504270485&amp;di=f05ed2f01e878403221f1f59ba2168d5&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fs1.ifengimg.com%2F2016%2F04%2F14%2F1354bbfd48ed0380cc67fd66b991809a.png"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">3</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/one-24/one-24.github.io.git" title="Chan" target="_blank" rel="external">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/one-24/one-24.github.io.git" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-关于canvas" class="article article-type-post">
+  
+    <h1 class="article-header">
+      关于canvas
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  yyyy-45-Sat
+</span>
+
+    
+
+    
+
+  </div>
+  <div class="article-entry">
+    <h1 id="一、绘制基础形状"><a href="#一、绘制基础形状" class="headerlink" title="一、绘制基础形状"></a>一、绘制基础形状</h1><h2 id="1、什么是canvas"><a href="#1、什么是canvas" class="headerlink" title="1、什么是canvas"></a>1、什么是canvas</h2><p><canvas></canvas> 是一个可以使用脚本(通常为 JavaScript )在其中绘制图形的 HTML 元素</p>
+<p>模板骨架</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">'canvas'</span> <span class="attr">width</span>=<span class="string">'400'</span> <span class="attr">height</span>=<span class="string">'200'</span>&gt;</span></div><div class="line">	  您的浏览器不支持canvas</div><div class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>)</div><div class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>)</div></pre></td></tr></table></figure>
+<p> <canvas>  标签只有两个属性—— width 和 height   当没有设置时  默认大小为 300px * 150px </canvas></p>
+<h2 id="2、canvas坐标"><a href="#2、canvas坐标" class="headerlink" title="2、canvas坐标"></a>2、canvas坐标</h2><p>canvas  是一个二维网格 左上角坐标为(0,0)</p>
+<p><img src="../images/location.jpg" alt=""></p>
+<h2 id="3、绘制矩形"><a href="#3、绘制矩形" class="headerlink" title="3、绘制矩形"></a>3、绘制矩形</h2><p>canvas  只支持一种原生的图形绘制：矩形  其他的所有图形都至少需要生成一条路径</p>
+<p>canvas 提供了三种方法绘制矩形：</p>
+<p>绘制填充矩形</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fillRect( x , y , width , height)</div></pre></td></tr></table></figure>
+<p>绘制矩形边框</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strokeRect( x , y , width , height)</div></pre></td></tr></table></figure>
+<p>清除指定矩形区域 让清除部分完全透明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">clearRect( x , y , width , height)</div></pre></td></tr></table></figure>
+<p>参数：</p>
+<p>x、y :  矩形左上角坐标(起始位置)</p>
+<p>width :  矩形的宽                          height :  矩形的高</p>
+<p>例：</p>
+<p><img src="../images/canvas-fillRect-0.png" alt=""></p>
+<p><img src="../images/canvas-fillRect-1.png" alt=""></p>
+<h2 id="4、绘制路径"><a href="#4、绘制路径" class="headerlink" title="4、绘制路径"></a>4、绘制路径</h2><p>路径是通过不同颜色和宽度的线段或者曲线相连形成的不同形状的点的集合 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath()  <span class="comment">// 开辟一段新的路径</span></div><div class="line">ctx.closePath()   <span class="comment">//闭合一段路径</span></div><div class="line"><span class="comment">//两者之间没有本质的联系</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">stroke()  <span class="comment">//显示出绘制的路径</span></div><div class="line">fill()   <span class="comment">//填充显示绘制的路径</span></div></pre></td></tr></table></figure>
+<p><strong>注</strong>：当调用 fill( )  函数的时候  所有没有闭合的形状都会自动闭合  所以不需要调用closePath()  函数  但是调用 stroke()  时不会自动闭合</p>
+<p><img src="../images/path.jpg" alt=""></p>
+<p>移动笔触</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">moveTo(x,y)  <span class="comment">//将笔触移动到指定的 x , y 坐标上</span></div></pre></td></tr></table></figure>
+<p>绘制一条从当前位置到指定位置的直线</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lineTo(x,y)</div></pre></td></tr></table></figure>
+<h2 id="5、弧线"><a href="#5、弧线" class="headerlink" title="5、弧线"></a>5、弧线</h2><p>绘制圆弧或者圆 使用 arc()  方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arc(x,y,radius,startAngle,endAngle,<span class="literal">true</span>/<span class="literal">false</span>)</div></pre></td></tr></table></figure>
+<p>参数：</p>
+<p>x , y :  圆心的坐标</p>
+<p>radius  :   圆的半径</p>
+<p>startAngle  :   从哪里开始绘制</p>
+<p>endAngle   :   到哪里结束</p>
+<p>true/false   :    最后一个参数为一个布尔值  true 代表逆时针  false  表示顺时针 </p>
+<p><strong>注：</strong> arc() 函数中的角度单位是弧度 不是角度 角度与弧度的 js 表达式：radians(弧度) =  (Math.PI/180)*degrees(角度)</p>
+<p><img src="../images/canvas圆-1.png" alt=""></p>
+<p>例：</p>
+<p><img src="../images/canvas-arc-0.png" alt=""></p>
+<p><img src="../images/canvas-arc-1.png" alt=""></p>
+<h2 id="6、贝塞尔-bezier-以及二次贝塞尔"><a href="#6、贝塞尔-bezier-以及二次贝塞尔" class="headerlink" title="6、贝塞尔(bezier)以及二次贝塞尔"></a>6、贝塞尔(bezier)以及二次贝塞尔</h2><p>路径类型就是 贝塞尔曲线   二次以及三次贝塞尔曲线都十分有用  一般用来绘制复杂有规律的图形</p>
+<p>绘制二次贝塞尔曲线  x , y  为结束点  cp1x ,  cp1y  为控制点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">quadraticCurveTo( cap1x , cp1y , x , y )</div></pre></td></tr></table></figure>
+<p>绘制三次贝塞尔曲线  x , y 为结束点  cp1x , cp1y 为控制点一   cp2x  ,  cp2y 为控制点二</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bezierCurveTo( cp1x , cp1y , cp2x , cp2y , x , y )</div></pre></td></tr></table></figure>
+<h2 id="7、矩形"><a href="#7、矩形" class="headerlink" title="7、矩形"></a>7、矩形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rect(x,y,width,height)</div></pre></td></tr></table></figure>
+<p>x , y  :  起始坐标  矩形宽 width  矩形高  height</p>
+<h2 id="8、Path2D-对象"><a href="#8、Path2D-对象" class="headerlink" title="8、Path2D 对象"></a>8、Path2D 对象</h2><p>为了 简化代码 和 提高性能 Path2D对象亦可以在较新版本的浏览器中使用  用来<strong>缓存或记录绘画命令</strong> </p>
+<p>Path2D() 会返回一个新初始化的 Path2D对象(可能将某一路径作为变量——创建一个它的副本  或者将一个包含SVG path数据的字符串作为变量)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Path2D();  <span class="comment">// 空的Path对象</span></div><div class="line"><span class="keyword">new</span> Path2D(path);   <span class="comment">// 克隆Path对象</span></div><div class="line"><span class="keyword">new</span> Path2D(d);   <span class="comment">//从 SVG 建立Path对象</span></div></pre></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Path = <span class="keyword">new</span> Path2D();</div><div class="line">path.rect(<span class="number">120</span>,<span class="number">120</span>,<span class="number">50</span>,<span class="number">50</span>);</div><div class="line">cxt.stroke(path);</div></pre></td></tr></table></figure>
+<p><img src="../images/Path2D-1.png" alt=""></p>
+<p>Path2D.addPath(path[, transform]) 添加了一条路径到当前路径 (可能添加了一个变换矩阵)</p>
+<p>使用 SVG  paths</p>
+<p>新的Path2D API 有另一个强大的特点 就是使用SVG path data 来初始化 canvas 上的路径  这将使你获取路径时可以以 SVG 或者 canvas 的方式来重用它们</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Path2D(<span class="string">"M10 10 h 80 v 80 v h -80 Z"</span>)</div></pre></td></tr></table></figure>
+<p>这条路径将先移动到点( M10 10 )然后再水平移动80 个单位 (h 80)   然后下移80个单位  (v  80)  接着左移 80  个单位(h -80)   再回到起点处(z)</p>
+<p><img src="../images/path2D-2.png" alt=""></p>
+<h1 id="二、颜色、样式和阴影"><a href="#二、颜色、样式和阴影" class="headerlink" title="二、颜色、样式和阴影"></a>二、颜色、样式和阴影</h1><h2 id="1、色彩样式"><a href="#1、色彩样式" class="headerlink" title="1、色彩样式"></a>1、色彩样式</h2><p>canvas提供了两个色彩属性</p>
+<p>设置图像的填充颜色</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fillStyle = color</div></pre></td></tr></table></figure>
+<p>设置图形的轮廓颜色</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strokeStyle = color</div></pre></td></tr></table></figure>
+<p>默认都是黑色  一旦设置了 strokeStyle  或者  fillStyle  的值  那么这个新的值就会成为新绘制图形的默认值 (也可以理解成继承了)   如果要给每个图形不痛的颜色 需要重新设置 fillStyle 或 strokeStyle 的值</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; <span class="number">6</span> ; i++)&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span> ; j &lt; <span class="number">6</span> ; j++)&#123;</div><div class="line">    ctx.fillStyle = <span class="string">'rgb('</span>+<span class="built_in">Math</span>.floor(<span class="number">255</span><span class="number">-42.5</span>*i)+<span class="string">','</span>+<span class="built_in">Math</span>.floor(<span class="number">255</span><span class="number">-42.5</span>*j)+<span class="string">',0)'</span></div><div class="line">    ctx.fillRect(j*<span class="number">25</span>,i*<span class="number">25</span>,<span class="number">25</span>,<span class="number">25</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="../images/fillRect-1.png" alt=""></p>
+<h2 id="2、线型的样式"><a href="#2、线型的样式" class="headerlink" title="2、线型的样式"></a>2、线型的样式</h2><p><strong>设置线条的宽度</strong>：lineWidth = value</p>
+<p><strong>设置线条末端样式</strong>：lineCap = butt / round / square</p>
+<p>butt(默认)：线段末端以方形结束 </p>
+<p>round：线段末端以圆形结束</p>
+<p>square：线段末端以方形结束  但是增加了一个宽度和线段相同 高度是线段厚度一半的矩形区域</p>
+<p><strong>设定线条与线条交接处的样式</strong> ：lineJoin = round / bevel / miter</p>
+<p>(如果2个相连的部分在同一方向那么 lineJoin 不会产生任何效果)</p>
+<p>round: 拐角处圆滑</p>
+<p>bevel：拐角处平的</p>
+<p>miter：通过衍生相连部分的外边缘 使其相交于一点 形成一个额外的菱形区域</p>
+<p>miterLimit = value  :  限制当两条线相交时交接处最大长度 所谓交接处长度(斜接长度)是指线条交接处内角顶点到外角顶点的长度</p>
+<p><img src="../images/miterLimit.png" alt=""></p>
+<h2 id="3、渐变-Gradients"><a href="#3、渐变-Gradients" class="headerlink" title="3、渐变 Gradients"></a>3、渐变 Gradients</h2><p><strong>线性渐变</strong></p>
+<p>createLinearGradient( x1 , y1 , x2 , y2)  </p>
+<p>x1 , y1 :  表示渐变的起点</p>
+<p>x2 , y2 :  表示渐变的终点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> linearGradient = ctx.createLinearGradient(<span class="number">100</span>,<span class="number">150</span>,<span class="number">300</span>,<span class="number">150</span>)</div><div class="line">linearGradient.addColorStop(<span class="number">0</span>,<span class="string">'skyblue'</span>)</div><div class="line">linearGradient.addColorStop(<span class="number">0.5</span>,<span class="string">'yellow'</span>)</div><div class="line">linearGradient.addColorStop(<span class="number">1</span>,<span class="string">'yellowgreen'</span>)</div><div class="line"></div><div class="line">ctx.fillStyle=linearGradient</div><div class="line">ctx.fillRect(<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">100</span>)</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-linearGradient.png" alt=""></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> linearGradient=cxt.createLinearGradient(<span class="number">50</span>,<span class="number">50</span>,<span class="number">250</span>,<span class="number">250</span>);</div><div class="line">  linearGradient.addColorStop(<span class="number">0</span>,<span class="string">'yellow'</span>);</div><div class="line">  linearGradient.addColorStop(<span class="number">.5</span>,<span class="string">'red'</span>);</div><div class="line">  linearGradient.addColorStop(<span class="number">1</span>,<span class="string">'green'</span>);</div><div class="line">  cxt.fillStyle=linearGradient;</div><div class="line">  cxt.fillRect(<span class="number">50</span>,<span class="number">50</span>,<span class="number">200</span>,<span class="number">200</span>);</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-linearGradient-2.png" alt=""></p>
+<p>上图 (50,50)  就是渐变的起点   (250,250)  是渐变的终点 连接这两点的白线就是渐变的方向</p>
+<p><strong>径向渐变</strong></p>
+<p>createRadialGradient( x1 , y1 , r1 , x2 , y2 , r2 )  </p>
+<p>前三个参数定义一个以 (x1,y1) 为原点  半径为 r1 的圆  </p>
+<p>后三个则定义一个以 (x2,y2) 为原点  半径为 r2 的圆</p>
+<p>gradient.addColorStop(position , color )  :  为图形上色</p>
+<p>  position：必须是 0 - 1 之间的数  表示渐变中颜色的相对位置  例如 0.5 表示</p>
+<p>颜色会出现在正中间 相当于50%的位置  </p>
+<p>color：颜色 如#fff  rgba(0,0,0,1) 等</p>
+<p><strong>同心渐变</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> rr = ctx.createRadialGradient(<span class="number">100</span>,<span class="number">100</span>,<span class="number">40</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>)</div><div class="line">rr.addColorStop(<span class="number">0</span>,<span class="string">'red'</span>)</div><div class="line">rr.addColorStop(<span class="number">.5</span>,<span class="string">'yellow'</span>)</div><div class="line">rr.addColorStop(<span class="number">1</span>,<span class="string">'blue'</span>)</div><div class="line">ctx.fillStyle = rr</div><div class="line">ctx.fillRect(<span class="number">20</span>,<span class="number">20</span>,<span class="number">160</span>,<span class="number">160</span>)</div><div class="line">ctx.fill()</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-createRadialGradient-1.png" alt=""></p>
+<p><strong>不同心但外圆包含内圆</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> rr2 = ctx.createRadialGradient(<span class="number">250</span>,<span class="number">250</span>,<span class="number">20</span>,<span class="number">260</span>,<span class="number">260</span>,<span class="number">50</span>)</div><div class="line">rr2.addColorStop(<span class="number">0</span>,<span class="string">'red'</span>)</div><div class="line">rr2.addColorStop(<span class="number">0.5</span>,<span class="string">'yellow'</span>)</div><div class="line">rr3.addColorStop(<span class="number">1</span>,<span class="string">'blue'</span>)</div><div class="line">ctx.fillStyle = rr2</div><div class="line">ctx.fillRect(<span class="number">50</span>,<span class="number">50</span>,<span class="number">400</span>,<span class="number">400</span>)</div><div class="line">ctx.fill();</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-createRadialGradient-2.png" alt=""></p>
+<p><strong>不同心 外圆内圆分离</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> rr3 = ctx.createRadialGradient(<span class="number">250</span>,<span class="number">250</span>,<span class="number">30</span>,<span class="number">350</span>,<span class="number">250</span>,<span class="number">50</span>)</div><div class="line">rr3.addColorStop(<span class="number">0</span>,<span class="string">'red'</span>)</div><div class="line">rr3.addColorStop(<span class="number">.8</span>,<span class="string">'yellow'</span>)</div><div class="line">rr3.addColorStop(<span class="number">1</span>,<span class="string">'blue'</span>)</div><div class="line">ctx.fillStyle = rr3</div><div class="line">ctx.fillRect(<span class="number">100</span>,<span class="number">100</span>,<span class="number">300</span>,<span class="number">300</span>)</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-createRadialGradient-3.png" alt=""></p>
+<h2 id="4、图案样式-Patterns"><a href="#4、图案样式-Patterns" class="headerlink" title="4、图案样式 Patterns"></a>4、图案样式 Patterns</h2><p>createPatterns(image,type)  该方法接受两个参数  </p>
+<p>images  可以是一个 Image  对象的引用  或者另一个 canvas  对象   Type 必须是下面的字符串之一：repeat   、   repeat-x    、   repeat-y   、   no-repeat</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img  = <span class="keyword">new</span> Image();</div><div class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> ptrn = ctx.createPatter(img,<span class="string">'no-repeat'</span>);</div><div class="line">  ctx.fillStyle=ptrn</div><div class="line">  ctx.fillRect(<span class="number">250</span>,<span class="number">250</span>,<span class="number">80</span>,<span class="number">80</span>)</div><div class="line">&#125;</div><div class="line">img.src=<span class="string">'images/1.png'</span></div></pre></td></tr></table></figure>
+<h2 id="5、阴影-Shadows"><a href="#5、阴影-Shadows" class="headerlink" title="5、阴影 Shadows"></a>5、阴影 Shadows</h2><p>shadowOffsetX = float shadowOffsetX 和 shadowOffsetY  /  shadowOffsetY = float shadowOffsetX 和 shadowOffsetY  用来设定阴影在 X 和 Y 轴的延伸距离  不受变换矩阵所影响    负值表示阴影会往上或 左 延伸  正值则表示会往下 或 右延伸   默认都为0</p>
+<p>shadowBlur = float shadowBlur  ：用于设定阴影的模糊程度  取值不与像素挂钩  也不受变换矩阵的影响  默认值为 0 </p>
+<p>shadowColor = color shadowColor  是标准CSS颜色  默认是全透明的黑色</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image()</div><div class="line">img.src = <span class="string">'images/1.png'</span></div><div class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  ctx.shadowOffsetX = <span class="number">10</span></div><div class="line">  ctx.shadowOffsetY = <span class="number">10</span></div><div class="line">  ctx.shadowBlur = <span class="number">8</span></div><div class="line">  ctx.shadowColor = <span class="string">'#333'</span></div><div class="line">  ctx.drawImage(img,<span class="number">10</span>,<span class="number">10</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-shadow-1.png" alt=""></p>
+<h2 id="6、canvas-填充规则-非零环绕"><a href="#6、canvas-填充规则-非零环绕" class="headerlink" title="6、canvas 填充规则 (非零环绕)"></a>6、canvas 填充规则 (非零环绕)</h2><p>当用到 fill ( 或者 clip 和 isPointinPath ) 可以选择一个填充规则  </p>
+<p><img src="../images/zero.jpg" alt=""></p>
+<p>当闭合的路径都是顺时针 或者 逆时针 那么这个闭合的区域就会被填充  如果从区域中拉出一条线  线经过的路径 有顺时针有逆时针 那么则不会被填充</p>
+<p>两个可能的值  “nonzero”(默认值)    “evenodd”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath()</div><div class="line">ctx.arc(<span class="number">100</span>,<span class="number">100</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>)</div><div class="line">ctx.arc(<span class="number">100</span>,<span class="number">100</span>,<span class="number">20</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>)</div><div class="line">ctx.fill(<span class="string">'evenodd'</span>);</div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-填充规则.png" alt=""></p>
+<h1 id="三、绘制文本"><a href="#三、绘制文本" class="headerlink" title="三、绘制文本"></a>三、绘制文本</h1><p>canvas 提供了两种方法渲染文本</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fillText(text , x , y [, maxWidth ])</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strokeText(text , x , y [, maxWidth ])</div></pre></td></tr></table></figure>
+<p>在指定的(x,y) 位置填充指定的文本 text   绘制的最大宽度是可选的</p>
+<p><code>font = value</code>  改变文本样式  参数一：字体大小  参数二：字体样式   默认字体是 ’10px  sans-serif’   </p>
+<p><code>textAlign = value</code> 文本对齐选项  可选值包括：start  end  left  right   center   默认值是start</p>
+<p><code>textBaseline = value</code>  基线对齐选项   可选值包括：top  hanging   middle   alphabetic    <code>ideographic   bottom</code>   默认值是alphabetic</p>
+<p><code>direction = value</code> 文本方向  可能的值包括：ltr   rtl   inherit   默认值是 inherit</p>
+<p><strong>文本测量</strong></p>
+<p><code>measureText()</code></p>
+<p>将返回一个 TextMetrics 对象的宽度、所在的像素、这些体现文本特性的属性</p>
+<h1 id="四、图像绘制"><a href="#四、图像绘制" class="headerlink" title="四、图像绘制"></a>四、图像绘制</h1><p>要绘制图像 首先要获得图像</p>
+<p>第一种：直接获取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;img src=<span class="string">'1.png'</span> id=<span class="string">'img1'</span>/&gt;</div><div class="line">  </div><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> img = <span class="built_in">document</span>.getElementById(<span class="string">'img1'</span>)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>第二种：动态创建</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image()</div><div class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// 等待图片加载完毕后执行的操作</span></div><div class="line">&#125;</div><div class="line">img.src = <span class="string">'1.png'</span></div></pre></td></tr></table></figure>
+<p>获得了原图对象就可以使用 drawImage  方法将它渲染到 canvas 里面</p>
+<h2 id="drawImage-方法三种形态："><a href="#drawImage-方法三种形态：" class="headerlink" title="drawImage 方法三种形态："></a>drawImage 方法三种形态：</h2><p><strong>第一种  基础</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drawImage(image,x,y)</div></pre></td></tr></table></figure>
+<p>image  是 image  或者  canvas  对象  x 和 y 是其在目标 canvas 里的起始坐标</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  img = <span class="keyword">new</span> Image()</div><div class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  ctx.drawImage(img,<span class="number">10</span>,<span class="number">10</span>)</div><div class="line">&#125;</div><div class="line">img.src=<span class="string">'1.png'</span></div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-drawImage-1.png" alt=""></p>
+<p><strong>第二种  缩放</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drawImage(image,x,y,width,height)</div></pre></td></tr></table></figure>
+<p>前面三个参数和第一个方法的含义相同  width 和 height 用来控制绘制在 canvas 里面的图片大小</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image()</div><div class="line">img.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  ctx.drawImage(img,<span class="number">10</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>)</div><div class="line">&#125;</div><div class="line">img.src=<span class="string">'1.png'</span></div></pre></td></tr></table></figure>
+<p><img src="../images/canvas-drawImage-2.png" alt=""></p>
+<p><strong>第三种  切片</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drawImage(img,sx,sy,sWidth,sHeight,dx,dy,dWidth,dHeight)</div></pre></td></tr></table></figure>
+<p>参数一：图片对象</p>
+<p>参数二、三：图片的定位 X / Y 轴</p>
+<p>参数四、五：截取的图片的宽 / 高</p>
+<p>参数六、七：开始绘制图片的 X / Y 轴坐标</p>
+<p>参数八、九：绘制出来的图片的宽 / 高</p>
+<p>(前四个是定义图像源的切片位置和大小  后四个是定义切片的目标显示位置和大小)</p>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image()</div><div class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  ctx.drawImage(img,<span class="number">10</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">100</span>,<span class="number">100</span>)</div><div class="line">&#125;</div><div class="line">img.src=<span class="string">'1.png'</span></div></pre></td></tr></table></figure>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2017 one-24 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
