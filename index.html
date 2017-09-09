@@ -78,22 +78,22 @@
           
             
               <li class="category-list-container">
-                <a href="javascript:;">Category</a>
+                <a href="javascript:;">分类</a>
                 
               </li>
             
           
             
               <li class="tag-list-container">
-                <a href="javascript:;">Tag</a>
+                <a href="javascript:;">标签</a>
                 
               </li>
             
           
             
               <li class="archive-list-container">
-                <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">3</span></li></ul>
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">4</span></li></ul>
               </li>
             
           
@@ -146,6 +146,142 @@
         <div style="max-width: 1000px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/09/09/字符串的常用方法/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/09/09/字符串的常用方法/"><span class="article-date">
+  yyyy-47-Sat
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="1、-anchor-创建-HTML-锚"><a href="#1、-anchor-创建-HTML-锚" class="headerlink" title="1、 anchor()  创建 HTML 锚"></a>1、 anchor()  创建 HTML 锚</h1><p><code>strObj.anchor(anchorName)</code></p>
+<p>anchorName  必须为锚定义名称</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> txt = <span class="string">"kobe"</span></div><div class="line"><span class="built_in">document</span>.write(txt.anchor(<span class="string">"mao"</span>))</div></pre></td></tr></table></figure>
+<p>上面的代码将输出为纯粹的 HTML ：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"mao"</span>&gt;</span>kobe<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="2、big-把字符串显示为大号字体"><a href="#2、big-把字符串显示为大号字体" class="headerlink" title="2、big() 把字符串显示为大号字体"></a>2、big() 把字符串显示为大号字体</h1><p><code>strObj.big()</code></p>
+<h1 id="3、blink-显示闪动的字符串"><a href="#3、blink-显示闪动的字符串" class="headerlink" title="3、blink()   显示闪动的字符串"></a>3、blink()   显示闪动的字符串</h1><p><code>strObj.blink()</code>  IE不支持</p>
+<h1 id="4、bold-将字符串显示为粗体"><a href="#4、bold-将字符串显示为粗体" class="headerlink" title="4、bold()  将字符串显示为粗体"></a>4、bold()  将字符串显示为粗体</h1><p><code>strObj.bold()</code></p>
+<h1 id="5、charAt-返回指定位置的字符"><a href="#5、charAt-返回指定位置的字符" class="headerlink" title="5、charAt()  返回指定位置的字符"></a>5、charAt()  返回指定位置的字符</h1><p>返回的字符是长度为 1  的字符串</p>
+<p><code>strObj.charAt(index)</code>     index 表示字符串的下标</p>
+<p><strong>字符串的下标从 0 开始  如果 index 不在 0 与 strObj.length 之间 该方法将返回一个空字符串 </strong></p>
+<h1 id="6、charCodeAt-返回指定位置字符的-Unicode-编码"><a href="#6、charCodeAt-返回指定位置字符的-Unicode-编码" class="headerlink" title="6、charCodeAt() 返回指定位置字符的 Unicode 编码"></a>6、charCodeAt() 返回指定位置字符的 Unicode 编码</h1><p><code>strObj.charCodeAt(index)</code></p>
+<p>返回值在 0 - 65535 之间的整数</p>
+<p><strong>如果 index 是负数或大于字符串的长度  则返回 NAN</strong></p>
+<h1 id="7、concat-连接两个或者多个字符-返回新字符串"><a href="#7、concat-连接两个或者多个字符-返回新字符串" class="headerlink" title="7、concat()  连接两个或者多个字符(返回新字符串)"></a>7、concat()  连接两个或者多个字符(返回新字符串)</h1><p><code>strObj.concat( str1 , str2 , str3 , ... ,strN )</code></p>
+<p>concat() 是将它所有的参数转换成字符串  然后按顺序连接到字符串 strObj 的尾部  返回的是  <strong><code>连接后的新字符串</code></strong>     <strong><code>strObj 本身并没有改变</code></strong></p>
+<p>与数组的 .concat()  很相似</p>
+<p>使用 + 来进行字符串连接更简便</p>
+<h1 id="8、-fixed-把字符串显示为打字机字体"><a href="#8、-fixed-把字符串显示为打字机字体" class="headerlink" title="8、 fixed() 把字符串显示为打字机字体"></a>8、 fixed() 把字符串显示为打字机字体</h1><p><code>strObj.fixed()</code></p>
+<h1 id="9、fontcolor-字符串颜色"><a href="#9、fontcolor-字符串颜色" class="headerlink" title="9、fontcolor() 字符串颜色"></a>9、fontcolor() 字符串颜色</h1><p><code>strObj.fontcolor(color)</code></p>
+<h1 id="10、fontsize-字符串尺寸"><a href="#10、fontsize-字符串尺寸" class="headerlink" title="10、fontsize()  字符串尺寸"></a>10、fontsize()  字符串尺寸</h1><p><code>strObj.fontsize(size)</code></p>
+<h1 id="11、fromCharCode-接收指定的-Unicode-值返回字符串"><a href="#11、fromCharCode-接收指定的-Unicode-值返回字符串" class="headerlink" title="11、fromCharCode()  接收指定的 Unicode 值返回字符串"></a>11、fromCharCode()  接收指定的 Unicode 值返回字符串</h1><p><code>string.fromCharCode( numX , numX , ... numX )</code></p>
+<p>numX 一个或是多个 Unicode 值  即要创建的字符串的 Unicode 编码</p>
+<p>不能作为已创建的 String 对象的方法来使用 </p>
+<h1 id="12、indexOf-返回指定的字符串值首次出现的位置"><a href="#12、indexOf-返回指定的字符串值首次出现的位置" class="headerlink" title="12、indexOf() 返回指定的字符串值首次出现的位置"></a>12、indexOf() 返回指定的字符串值首次出现的位置</h1><p><code>strObj.indexOf( searchValue , fromindex )</code></p>
+<p>searchValue : 需要检索的字符串值</p>
+<p>fromindex : 可选的整数参数 规定在字符串中开始检索的位置 取值为 0 到 strObj.length-1   如果不写就从首字符开始检索</p>
+<p>如果要检索的字符没有出现 则返回 -1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Hello world"</span></div><div class="line"><span class="built_in">console</span>.log( str.indexOf(<span class="string">"Hello"</span>) )    <span class="comment">//  =&gt;  0</span></div><div class="line"><span class="built_in">console</span>.log( str.indexOf(<span class="string">"World"</span>) )    <span class="comment">//  =&gt;  -1</span></div><div class="line"><span class="built_in">console</span>.log( str.indexOf(<span class="string">"world"</span>) )    <span class="comment">//  =&gt;  6</span></div></pre></td></tr></table></figure>
+<h1 id="13、italics-字符串显示斜体"><a href="#13、italics-字符串显示斜体" class="headerlink" title="13、italics() 字符串显示斜体"></a>13、italics() 字符串显示斜体</h1><p><code>strObj.italics()</code></p>
+<h1 id="14、lastIndexOf-从后向前搜索指定字符串出现的位置"><a href="#14、lastIndexOf-从后向前搜索指定字符串出现的位置" class="headerlink" title="14、lastIndexOf()  从后向前搜索指定字符串出现的位置"></a>14、lastIndexOf()  从后向前搜索指定字符串出现的位置</h1><p><code>strObj.lastIndexOf( searchValue , fromindex )</code></p>
+<p>如果要检索的字符没有出现 则返回 -1</p>
+<h1 id="15、link-将字符串显示为链接"><a href="#15、link-将字符串显示为链接" class="headerlink" title="15、link() 将字符串显示为链接"></a>15、link() 将字符串显示为链接</h1><p><code>strObj.link(url)</code></p>
+<p>url : 必须写  规定要链接的 URL </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"kobe"</span></div><div class="line"><span class="built_in">document</span>.write( str.link(<span class="string">"http://kobe.sina.com.cn/"</span>))</div><div class="line"><span class="comment">// kobe 即被显示为超链接</span></div></pre></td></tr></table></figure>
+<h1 id="16、localeCompare-用本地特定的顺序来比较两个字符串"><a href="#16、localeCompare-用本地特定的顺序来比较两个字符串" class="headerlink" title="16、localeCompare() 用本地特定的顺序来比较两个字符串"></a>16、localeCompare() 用本地特定的顺序来比较两个字符串</h1><p><code>strObj.localeCompare(target)</code></p>
+<p>target : 以本地特定的顺序与 strObj 进行比较的字符串</p>
+<p>返回值：说明比较结果的数字   </p>
+<p>如果 strObj 小于 target   则返回小于 0 的数 </p>
+<p>如果 strObj 大于 target   则返回大于 0 的数 </p>
+<p>相等则返回 0 </p>
+<h1 id="17、match-检索字符串内指定值-返回指定值"><a href="#17、match-检索字符串内指定值-返回指定值" class="headerlink" title="17、match() 检索字符串内指定值 (返回指定值)"></a>17、match() 检索字符串内指定值 (返回指定值)</h1><p>可在字符串内检索指定位置的值  或找到一个或者多个正则表达式的匹配</p>
+<p>类似 indexOf()  和 lastIndexOf()   返回值不同</p>
+<p><code>strObj.match(searchValue)</code></p>
+<p><code>strObj.match(regexp)</code></p>
+<p>searchValue :  必须写 要检索的字符串值</p>
+<p>regexp  :  必须写  规定要匹配的 RegExp  对象    如果该参数不是 RegExp  对象  则先要把它传递给 RegExp  构造函数  转换为 RegExp  对象</p>
+<p>RegExp ：正则表达式对象</p>
+<h1 id="18、replace-替换字符串-返回新字符串"><a href="#18、replace-替换字符串-返回新字符串" class="headerlink" title="18、replace()  替换字符串(返回新字符串)"></a>18、replace()  替换字符串(返回新字符串)</h1><p><code>strObj.replace(regexp/substr , replacement)</code></p>
+<p>regexp : 必须  规定子字符串和要替换的模式的 RegExp 对象 (如果这个值是一个字符串 则将它作为要检索的直接量文本模式)</p>
+<p>replacement : 必须  一个字符串值  规定了替换文本或生成替换文本的函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//strObj 的 replace() 方法执行的是查找并替换的操作  它将在 strObj 中查找与  RegExp 相匹配的子字符串  然后用 replacement 来替换   如果 RegExp 具有全局标志 g 那么 replace() 方法将替换所有匹配的子字符串  否则只能替换第一个匹配子字符串</span></div><div class="line"></div><div class="line"><span class="comment">//replacement 可以是字符串 也可以是函数  如果是字符串 那么每个匹配都将由字符串替换  但是 replacement  中的 $ 字符具有特定含义  说明从模式匹配得到的字符串将用于替换</span></div></pre></td></tr></table></figure>
+<p><img src="../images/str.replace(" alt="">.png)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"hello kobe"</span></div><div class="line"><span class="built_in">console</span>.log( str.replace(<span class="regexp">/kobe/</span>,<span class="string">"Bryant"</span>) )  <span class="comment">// =&gt; hello Bryant</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 全局替换</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"hello kobe"</span></div><div class="line">str += <span class="string">"kobe is mvp"</span></div><div class="line">str += <span class="string">"one year not see kobe "</span></div><div class="line"><span class="built_in">console</span>.log( str.replace(<span class="regexp">/kobe/g</span>,<span class="string">"bryant"</span>))  <span class="comment">// =&gt;  "hello bryant bryant is mvp one year net see bryant"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可以使用这段代码来确保匹配字符串的大量字符是否书写正确</span></div><div class="line"></div><div class="line">text = <span class="string">"javascript Tutorial"</span></div><div class="line">text.replace(<span class="regexp">/javascript/i</span>,<span class="string">"Javascript"</span>)</div><div class="line"><span class="comment">//i : 执行忽略大小写的检索</span></div></pre></td></tr></table></figure>
+<p><img src="../images/str.replace(" alt="">-1.png)</p>
+<h1 id="19、search-检索指定字符-返回第一个匹配值的起始位置"><a href="#19、search-检索指定字符-返回第一个匹配值的起始位置" class="headerlink" title="19、search() 检索指定字符(返回第一个匹配值的起始位置)"></a>19、search() 检索指定字符(返回第一个匹配值的起始位置)</h1><p><code>strObj.search(regexp)</code></p>
+<p>检索指定字符或者与正则表达式相匹配的字符</p>
+<p>regexp : 可以是字符串也可以是 RegExp 对象  </p>
+<p>返回值：返回第一个与 regexp 相匹配的子字符串的起始位置   如果没有相匹配的字符串就返回 -1 </p>
+<p>search() 方法不执行全局匹配  将忽略标志 g 同时忽略 regexp 的lastIndex 属性  总是从字符串的开始进行检索  即返回第一个匹配的位置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"hello kobe"</span></div><div class="line"><span class="built_in">console</span>.log( str.search(<span class="string">"kobe"</span>))   <span class="comment">// =&gt; 6</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Hello Kobe"</span></div><div class="line"><span class="built_in">console</span>.log(str.search(<span class="string">"kobe"</span>))    <span class="comment">//  =&gt;  -1 </span></div><div class="line"><span class="comment">// search 对大小写敏感</span></div><div class="line"><span class="built_in">console</span>.log(str.search(<span class="regexp">/kobe/i</span>))    <span class="comment">// =&gt;  6</span></div></pre></td></tr></table></figure>
+<h1 id="20、slice-提取字符串的某个部分-返回新的字符串"><a href="#20、slice-提取字符串的某个部分-返回新的字符串" class="headerlink" title="20、slice()  提取字符串的某个部分 (返回新的字符串)"></a>20、slice()  提取字符串的某个部分 (返回新的字符串)</h1><p><code>strObj.slice( start , end )</code></p>
+<p>start : 提取部分的起始下标  如果是负数就从尾部开始计算  ( -1 指字符串最后一个字符  -2指倒数第二个 以此类推)</p>
+<p>end : 提取部分结尾的下标 如果没有指定该参数 则从 start 位置提取到最后 如果是负数就从尾部开始计算</p>
+<p>返回值： 一个新的字符串 包括字符串 strObj 从 start 开始 ( <strong>包括 start</strong> )  到 end 结束( <strong>不包括 end</strong> ) 为止的所有字符</p>
+<p>说明：String 对象的方法 slice( ) 、substring( ) 和 substr( ) (不建议使用)  都可以返回字符串的指定部分   slice( )  比 substring( ) 要灵活 因为它允许负数作为参数   slice() 与 substr() 有所不同  substr( ) 是用字符位置和长度来指定子字符串   String.slice( )  与 Array.slice( )  相似</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"kobe bryant"</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">4</span>,<span class="number">-3</span>))   <span class="comment">// =&gt; " bry"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"kobe bryant"</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">-3</span>))      <span class="comment">//  =&gt; "ant"</span></div><div class="line"><span class="comment">//表示提取的是从右往左 第三个字符到最后的字符</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">-3</span>,<span class="number">-1</span>))    <span class="comment">//  =&gt; "an"</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">5</span>,<span class="number">2</span>))   <span class="comment">//  =&gt; 空字符串</span></div></pre></td></tr></table></figure>
+<h1 id="21、substr-抽取从-start-下标开始的指定数目的字符-返回新的字符串"><a href="#21、substr-抽取从-start-下标开始的指定数目的字符-返回新的字符串" class="headerlink" title="21、substr() 抽取从 start 下标开始的指定数目的字符(返回新的字符串)"></a>21、substr() 抽取从 start 下标开始的指定数目的字符(返回新的字符串)</h1><p><code>strObj.substr( start , length )</code></p>
+<p>start : 必需  要抽取的子串的起始下标  如果是负数那么从字符串尾部开始算起 </p>
+<p>length : 可选  字符串中的字符数 </p>
+<p><strong>注意 </strong>：ECMAscript 没有对该方法进行标准化 所以反对使用它    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"hello world"</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">3</span>))    <span class="comment">// =&gt; lo world</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">1</span>,<span class="number">2</span>))    <span class="comment">// =&gt; el   表示从索引 1 开始 截取 2 个字符</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">-3</span>,<span class="number">2</span>))    <span class="comment">//  =&gt; rl </span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">-11</span>,<span class="number">2</span>))    <span class="comment">// =&gt; he</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">-22</span>,<span class="number">2</span>))    <span class="comment">//  =&gt;  he  如果 start 为负值 且 abs(start) 大于字符串的长度  则 substr 使用 0 作为开始提取的索引</span></div></pre></td></tr></table></figure>
+<h1 id="22、substring-提取字符串中介于两个指定下标之间的字符-返回新的字符串"><a href="#22、substring-提取字符串中介于两个指定下标之间的字符-返回新的字符串" class="headerlink" title="22、substring()  提取字符串中介于两个指定下标之间的字符(返回新的字符串)"></a>22、substring()  提取字符串中介于两个指定下标之间的字符(返回新的字符串)</h1><p><code>strObj.substring(start,stop)</code></p>
+<p>start : 必需  一个非负的整数 提取的起始位置</p>
+<p>stop : 可选  一个非负的整数  提取的字符<strong>不包括</strong> stop 位置的字符</p>
+<p>返回值：新的字符串 内容是从 start 到 stop-1 处的所有字符 </p>
+<p>如果 start 与 stop 相等 则返回一个空字符串  如果 start 比 stop 大  那么该方法在提取子串之前会先交换这两个参数的值  如果 stop 大于strObj.length  那么就被当做 strObj.length</p>
+<p><strong>注意：</strong> 与 slice() 和 substr() 方法不同的是 substring() 不接受负的参数</p>
+<h1 id="23、small-显示小号字体"><a href="#23、small-显示小号字体" class="headerlink" title="23、small() 显示小号字体"></a>23、small() 显示小号字体</h1><p><code>strObj.small()</code></p>
+<h1 id="24、split-把字符串分割成字符串数组"><a href="#24、split-把字符串分割成字符串数组" class="headerlink" title="24、split() 把字符串分割成字符串数组"></a>24、split() 把字符串分割成字符串<strong>数组</strong></h1><p><code>strObj.split( separator , howmany )</code></p>
+<p>separator : 必需 字符串或正则表达式 从该参数指定的地方分隔 strObj</p>
+<p>howmany : 可选  该参数可指定返回的数组的最大长度   如果设置了该参数  返回的子字符串不会多于这个参数指定的数组  如果没有指定这个参数 整个字符串都会被分隔 </p>
+<p>返回值：字符串数组  该数组是通过在 separator 指定的外边界处将字符串 strObj 分隔成子串创建的  返回的数组中的子串不包括 separator 自身  但是如果 separator 是包含子表达式的正则表达式  那么返回的数组中包括与这些子表达式匹配的字串( 但不包括与整个正则表达式匹配的文本 )</p>
+<p><strong>如果把空字符串(“”)用作 separator  那么 strObj 中的每个字符之间都会被分割</strong></p>
+<p>String.split() 执行的操作与 Array.join()  执行的操作是相反的</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"How are you doing today?"</span></div><div class="line"><span class="built_in">console</span>.log( str.split(<span class="string">" "</span>) )    <span class="comment">//  =&gt;  ["how","are","you","doing","today?"]</span></div><div class="line"><span class="built_in">console</span>.log( str.split(<span class="string">""</span>) )    <span class="comment">//  =&gt;  ["H","o","w","a","r","e","y","o","u","d","o","i","n","g","t","o","d","a","y"]</span></div><div class="line"><span class="built_in">console</span>.log( str.split(<span class="string">" "</span>,<span class="number">3</span>))   <span class="comment">// =&gt;  ["how","are","you"]</span></div><div class="line"><span class="built_in">console</span>.log( str.split())   <span class="comment">// =&gt; ["How are you doing today?"]   如果忽略则返回整个字符串的数组形式</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"2:3:4:5"</span></div><div class="line">str.split(<span class="string">":"</span>)   <span class="comment">//  =&gt;  ["2","3","4","5"]</span></div><div class="line"><span class="string">"|a|b|c"</span>.split(<span class="string">"|"</span>)    <span class="comment">//  =&gt;   ["","a","b","c"]</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"hello"</span>.split(<span class="string">""</span>)   <span class="comment">// =&gt; ["h","e","l","l","o"]</span></div><div class="line"><span class="string">"hello"</span>.split(<span class="string">""</span>,<span class="number">3</span>)    <span class="comment">//  =&gt;  ["h","e","l"]</span></div></pre></td></tr></table></figure>
+<h1 id="25、strike-显示加删除线的字符串"><a href="#25、strike-显示加删除线的字符串" class="headerlink" title="25、strike() 显示加删除线的字符串"></a>25、strike() 显示加删除线的字符串</h1><p><code>strObj.strike()</code></p>
+<h1 id="26、sub-把字符串显示为下标"><a href="#26、sub-把字符串显示为下标" class="headerlink" title="26、sub() 把字符串显示为下标"></a>26、sub() 把字符串显示为下标</h1><p><code>strObj.sub()</code></p>
+<h1 id="27、sup-把字符串显示为上标"><a href="#27、sup-把字符串显示为上标" class="headerlink" title="27、sup() 把字符串显示为上标"></a>27、sup() 把字符串显示为上标</h1><p><code>strObj.sup()</code></p>
+<h1 id="28、toLocaleLowerCase-转换小写-返回新的字符串"><a href="#28、toLocaleLowerCase-转换小写-返回新的字符串" class="headerlink" title="28、toLocaleLowerCase()  转换小写(返回新的字符串)"></a>28、toLocaleLowerCase()  转换小写(返回新的字符串)</h1><p><code>strObj.toLocaleLowerCase()</code></p>
+<p>与 toLowerCase() 不同的是，toLocaleLowerCase()<br>方法按照本地方式把字符串转换为小写。只有几种语言（如土耳其语）具有地方特有的大小写映射，所有该方法的返回值通常与 toLowerCase() 一样。</p>
+<h1 id="29、toLocaleUpperCase-转换大写-返回新的字符串"><a href="#29、toLocaleUpperCase-转换大写-返回新的字符串" class="headerlink" title="29、toLocaleUpperCase()  转换大写(返回新的字符串)"></a>29、toLocaleUpperCase()  转换大写(返回新的字符串)</h1><p><code>strObj.toLocaleLowerCase()</code></p>
+<p>与 toUpperCase() 不同的是，toLocaleUpperCase()<br>方法按照本地方式把字符串转换为大写。只有几种语言（如土耳其语）具有地方特有的大小写映射，所有该方法的返回值通常与 toUpperCase() 一样。</p>
+<h1 id="30、toLowerCase-转小写-返回新的字符串"><a href="#30、toLowerCase-转小写-返回新的字符串" class="headerlink" title="30、toLowerCase() 转小写(返回新的字符串)"></a>30、toLowerCase() 转小写(返回新的字符串)</h1><h1 id="31、toUpperCase-转大写-返回新的字符串"><a href="#31、toUpperCase-转大写-返回新的字符串" class="headerlink" title="31、toUpperCase() 转大写(返回新的字符串)"></a>31、toUpperCase() 转大写(返回新的字符串)</h1><p>不影响原字符串本身的值</p>
+<h1 id="32、toSource-代表对象的源代码"><a href="#32、toSource-代表对象的源代码" class="headerlink" title="32、toSource()  代表对象的源代码"></a>32、toSource()  代表对象的源代码</h1><h1 id="33、toString-返回字符串-返回原始字符串-一般不用"><a href="#33、toString-返回字符串-返回原始字符串-一般不用" class="headerlink" title="33、toString()  返回字符串(返回原始字符串 一般不用)"></a>33、toString()  返回字符串(返回原始字符串 一般不用)</h1><h1 id="34、valueOf-返回String-对象的原始值"><a href="#34、valueOf-返回String-对象的原始值" class="headerlink" title="34、valueOf() 返回String 对象的原始值"></a>34、valueOf() 返回String 对象的原始值</h1><p>原始值是由 string 对象下来的所有对象继承的  valueOf()  通常由 JavaScript 在后台自动调用 而不是显式地处于代码之中</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
